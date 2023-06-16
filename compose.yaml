@@ -1,0 +1,15 @@
+version: '3'
+services:
+  ordersapi:
+    build:
+#      context: ./OrdersMinimalAPI 
+      dockerfile: ./OrdersMinimalAPI/Dockerfile
+    ports:
+      - '5000:80'
+
+  productsapi:
+    build:
+#      context: ./ProductsMinimalAPI 
+      dockerfile: ./ProductsMinimalAPI/Dockerfile
+    ports:
+      - '5001:80'
